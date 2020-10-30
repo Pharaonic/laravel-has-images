@@ -1,0 +1,39 @@
+{
+    "name": "pharaonic/laravel-has-images",
+    "description": "Laravel - Model's Multi Images",
+    "keywords": [
+        "php",
+        "laravel",
+        "has images",
+        "images",
+        "pharaonic"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raggi",
+            "email": "support@pharaonic.io",
+            "homepage": "https://pharaonic.io"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": ">=8.0",
+        "pharaonic/laravel-uploader": ">=1.0",
+        "pharaonic/laravel-helpers": ">=1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pharaonic\\Laravel\\Images\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pharaonic\\Laravel\\Images\\ImagesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

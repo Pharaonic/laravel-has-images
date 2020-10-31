@@ -5,6 +5,13 @@ namespace Pharaonic\Laravel\Images;
 use Exception;
 use Illuminate\Http\UploadedFile;
 
+/**
+ * Has Images Trait
+ *
+ * @version 1.0
+ * @author Raggi <support@pharaonic.io>
+ * @license http://opensource.org/licenses/mit-license.php MIT License
+ */
 trait HasImages
 {
     /**

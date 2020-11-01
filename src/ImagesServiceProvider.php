@@ -26,7 +26,7 @@ class ImagesServiceProvider extends ServiceProvider
     {
         // Publishes
         $this->publishes([
-            __DIR__ . '/database/migrations/images.stub'         => database_path(sprintf('migrations/%s_create_images_table.php',          date('Y_m_d_His', time()))),
+            __DIR__ . '/database/migrations/images.stub'         => database_path(sprintf('migrations/%s_create_images_table.php',          date('Y_m_d_His', time() + 3))),
         ], ['pharaonic', 'laravel-has-images']);
 
         // Loads

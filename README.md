@@ -66,8 +66,8 @@ class Article extends Model
 #### How to use
 
 ```php
-$article = Article::find(1); 					// Model
-$images = $article->images // Article Images
+$article = Article::find(1); 		// Model
+$images = $article->images 		// Article Images
 $article->addImage($request->fileName);	// Setting New Single Image
 
 echo $article->images[0]->url; 	        // Getting image URL
@@ -75,7 +75,7 @@ echo $article->images[0]->url; 	        // Getting image URL
 // Create Article
 $article = new Article;
 ...
-$article->images = [							// Setting Images List
+$article->images = [			// Setting Images List
 	$request->file1,
 	$request->file2,
 	$request->file3
@@ -87,11 +87,11 @@ echo $article->images[2]->url;
 
 
 // Delete Images
-$article->delete(); 				// Delete Article with all related images
+$article->delete(); 			// Delete Article with all related images
 // OR
-$article->clearImages();			// Delete all related images
+$article->clearImages();		// Delete all related images
 // OR
-$article->images[2]->delete();	// Delete image with Index
+$article->images[2]->delete();		// Delete image with Index
 
 ```
 
@@ -112,20 +112,20 @@ $image = $article->images[0];
 ```
 ```php
 // Information
-echo $image->hash; // Image's Hash
-echo $image->name; // Image's Name
-echo $image->path; // Image's Path
-echo $image->size; // Image's Size in Bytes
-echo $image->readableSize(); // Image's Readable Size [B, KB, MB, ...] (1000)
-echo $image->readableSize(false); // Image's Readable Size [B, KiB, MiB, ...] (1024)
-echo $image->extension; // Image's Extension
-echo $image->mime; // Image's MIME
+echo $image->hash; 			// Image's Hash
+echo $image->name; 			// Image's Name
+echo $image->path; 			// Image's Path
+echo $image->size; 			// Image's Size in Bytes
+echo $image->readableSize(); 		// Image's Readable Size [B, KB, MB, ...] (1000)
+echo $image->readableSize(false); 	// Image's Readable Size [B, KiB, MiB, ...] (1024)
+echo $image->extension; 		// Image's Extension
+echo $image->mime; 			// Image's MIME
 
-echo $image->visits; // Image's visits (Visitable Image)
+echo $image->visits; 			// Image's visits (Visitable Image)
 
 
 // Getting URL
-echo $image->url; // Getting Uploaded Image's URL
+echo $image->url; 			// Getting Uploaded Image's URL
 
 
 // Deleting The Image
@@ -133,11 +133,11 @@ $image->delete();
 
 
 // Permits (Private Image)
-$permits = $image->permits; // Getting Permits List
-$permitted = $image->isPermitted($user); // Checking if permitted (App\User)
+$permits = $image->permits; 			// Getting Permits List
+$permitted = $image->isPermitted($user); 	// Checking if permitted (App\User)
 
-$image->permit($user, '2021-02-01'); // Permitting a user
-$image->forbid($user); // Forbidding a user
+$image->permit($user, '2021-02-01'); 		// Permitting a user
+$image->forbid($user); 				// Forbidding a user
 ```
 
 

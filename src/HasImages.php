@@ -21,6 +21,15 @@ trait HasImages
      */
     protected static $imagesItems = [];
 
+
+    /**
+     * @return void
+     */
+    public function initializeHasImages()
+    {
+        $this->fillable[] = 'images';
+    }
+
     protected static function bootHasImages()
     {
         // Created
@@ -65,11 +74,11 @@ trait HasImages
     public function _setImagesAttribute($images)
     {
         $this->clearImages();
-
+        $options = $this->filesOptions['images'] ?? [];
         foreach ($images as $sort => $img) {
             $this->images()->create([
                 'sort'      => $sort,
-                'upload_id' => upload($img)->id
+                'upload_id' => upload($img, $options)->id
             ]);
         }
 
@@ -78,9 +87,10 @@ trait HasImages
 
     public function addImage(UploadedFile $img, int $sort = 0)
     {
+        $options = $this->filesOptions['images'] ?? [];
         return $this->images()->create([
             'sort'      => $sort,
-            'upload_id' => upload($img)->id
+            'upload_id' => upload($img, $options)->id
         ]);
     }
 

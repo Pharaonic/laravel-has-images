@@ -11,7 +11,7 @@
   <a href="https://packagist.org/packages/pharaonic/laravel-has-images" target="_blank"><img src="https://poser.pugx.org/pharaonic/laravel-has-images/downloads" alt="Packagist Downloads"></a>
 </p>
 
-<h3 align="center">Has-Files provides a quick and easy way to link files with a model.</h3>
+<h3 align="center">Has-Files provides a quick and easy way to link images with a model.</h3>
 <br>
 
 ## Documentation

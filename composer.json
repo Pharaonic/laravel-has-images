@@ -1,6 +1,6 @@
 {
     "name": "pharaonic/laravel-has-images",
-    "description": "Laravel - Model's Multi Images",
+    "description": "Laravel-Has-Images provides a quick and easy way to link images with a model.",
     "keywords": [
         "laravel images",
         "laravel files",

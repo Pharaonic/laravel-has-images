@@ -16,7 +16,7 @@
 
 ## Documentation
 
-You can find the detailed documentation here in [Laravel Has-Images Documentation](https://pharaonic.io/package/2-laravel/10-has-images).
+You can find the detailed documentation here in [Laravel Has-Images Documentation](https://pharaonic.io/package/2-laravel/11-has-images).
 
 ## Contributing
 

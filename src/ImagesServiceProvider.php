@@ -14,7 +14,8 @@ class ImagesServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Migrations Loading
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
     }
 
     /**
@@ -26,10 +27,7 @@ class ImagesServiceProvider extends ServiceProvider
     {
         // Publishes
         $this->publishes([
-            __DIR__ . '/database/migrations/images.stub'         => database_path(sprintf('migrations/%s_create_images_table.php',          date('Y_m_d_His', time() + 3))),
+            __DIR__ . '/database/migrations/2021_02_01_000004_create_images_table.php' => database_path('migrations/2021_02_01_000004_create_images_table.php'),
         ], ['pharaonic', 'laravel-has-images']);
-
-        // Loads
-        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
     }
 }

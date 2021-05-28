@@ -50,7 +50,7 @@ $ php artisan migrate
 // Using HasImages in Article Model
 ...
 use Pharaonic\Laravel\Images\HasImages;
-use Pharaonic\Laravel\Helpers\Traits\HasCustomAttributes;
+
 
 class Article extends Model
 {

@@ -8,9 +8,8 @@ use Pharaonic\Laravel\Uploader\Upload;
 /**
  * Image Model
  *
- * @version 1.0
- * @author Raggi <support@pharaonic.io>
- * @license http://opensource.org/licenses/mit-license.php MIT License
+ * @version 2.0
+ * @author Moamen Eltouny (Raggi) <raggi@raggitech.com>
  */
 class Image extends Model
 {
@@ -37,6 +36,16 @@ class Image extends Model
     public function getUrlAttribute()
     {
         return $this->file->url;
+    }
+
+    /**
+     * Get Thumbnail
+     *
+     * @return string
+     */
+    public function getThumbnailAttribute()
+    {
+        return $this->file->thumbnail ?? null;
     }
 
     /**

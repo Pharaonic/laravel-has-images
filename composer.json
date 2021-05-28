@@ -2,18 +2,19 @@
     "name": "pharaonic/laravel-has-images",
     "description": "Laravel - Model's Multi Images",
     "keywords": [
-        "php",
-        "laravel",
-        "has images",
+        "laravel images",
+        "laravel files",
+        "php images",
+        "php files",
         "images",
-        "pharaonic"
+        "laravel",
+        "php"
     ],
     "license": "MIT",
     "authors": [
         {
-            "name": "Raggi",
-            "email": "support@pharaonic.io",
-            "homepage": "https://pharaonic.io"
+            "name": "Moamen Eltouny (Raggi)",
+            "email": "raggi@raggitech.com"
         }
     ],
     "require": {

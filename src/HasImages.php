@@ -4,23 +4,24 @@ namespace Pharaonic\Laravel\Images;
 
 use Exception;
 use Illuminate\Http\UploadedFile;
+use Pharaonic\Laravel\Helpers\Traits\HasCustomAttributes;
 
 /**
  * Has Images Trait
  *
- * @version 1.0
- * @author Raggi <support@pharaonic.io>
- * @license http://opensource.org/licenses/mit-license.php MIT License
+ * @version 2.0
+ * @author Moamen Eltouny (Raggi) <raggi@raggitech.com>
  */
 trait HasImages
 {
+    use HasCustomAttributes;
+    
     /**
      * Images Atrributes on Save/Create
      *
      * @var array
      */
     protected static $imagesItems = [];
-
 
     /**
      * @return void

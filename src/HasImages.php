@@ -100,7 +100,9 @@ trait HasImages
      */
     public function images()
     {
-        return $this->morphMany(Image::class, 'model');
+        $options = $this->filesOptions['images'] ?? [];
+        
+        return $this->morphMany(Image::class, 'model')->with(isset($options['thumbnail']) ? 'file.thumbnail' : 'file');
     }
 
     /**
